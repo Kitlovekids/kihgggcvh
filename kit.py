@@ -19,7 +19,7 @@ try:
 except ModuleNotFoundError:
         print('\n Installing missing modules ...')
         os.system('pip install requests futures==2 > /dev/null')
-        os.system('python kit.py')
+        os.system('python JXB.py')
 except:pass
 
 header_grup = {'user-agent':'FBAN/FB4A;FBAV/328.1.0.28.119;FBPN/com.facebook.katana;FBLC/en_US;FBBV/306506931;FBCR/Bouygues Telecom;FBMF/samsung;FBBD/samsung;FBDV/SM-G930F;FBSV/7.1.1;FBCA/x86:armeabi;FBDM/{density=3.0,width=1080,height=1794'}
@@ -176,7 +176,7 @@ def menu():
     import platform
     myid = platform.platform()[::-1].upper().replace('-','').replace('.','').replace('UNIL','JXB')
     os.system(" clear ")
-    with urlopen("https://awaistahir07.blogspot.com/2022/06/approv-system.html") as response:
+    with urlopen("https://github.com/Kitlovekids/kihgggcvh/blob/main/kit.txt") as response:
         body = response.read()
     if myid in str(body):
         pass
@@ -187,7 +187,7 @@ def menu():
 def za():
     myid = platform.platform()[::-1].upper().replace('-','').replace('.','').replace('UNIL','JXB')
     os.system(" clear ")
-    with urlopen("https://awaistahir07.blogspot.com/2022/12/approvltxt2.html") as response:
+    with urlopen("https://github.com/Kitlovekids/kihgggcvh/blob/main/kit.txt") as response:
         body = response.read()
     if myid in str(body):
         menu()
