@@ -1,4 +1,3 @@
-
 try:
     import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass,mechanize,requests,bxin
     from multiprocessing.pool import ThreadPool
@@ -42,7 +41,7 @@ CorrectPassword = 'bxi'
 
 loop = 'true'
 while (loop == 'true'):
-    print logo
+    print (logo)
     username = raw_input(' TOOL USERNAME: ')
     if (username == CorrectUsername):
     	password = raw_input(' TOOL PASSWORD: ')
