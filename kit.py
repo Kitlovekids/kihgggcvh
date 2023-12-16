@@ -68,7 +68,7 @@ def logo():
  [•] Status    :   Free
  [•] Tool      :   Free 
  [•] Facebook  :   Ishmum Sarker Siam
- [•] Version   :  \033[1;32m 2.6°\033[1;32m \033[1;37m
+ [•] Version   :  \033[1;32m 2.7\033[1;32m \033[1;37m
 ---------------------------------------------------''')
 	p(logo)
 def clear():
@@ -559,8 +559,8 @@ class Ishmum:
 			density = random.choice(["2.0","2.25","2.75","3.0","3.25","3 75"])
 			width = random.randint(720, 1440)
 			height = random.randint(1080, 2560)
-			fblc = random.choice(["ja_JP","ex_MX","en_CU","en_US","fr_FR","es_ES","pt_BR","de_DE","it_IT","ja_JP","ko_KR","ru_RU","zh_CN","ar_AE","en_GB"])
-			fbcr = random.choice(["Telenor","MOVO AFRICA","UFONE-PAKTel","Zong","Jazz","SCO","Jio","Vodafone","Airtel","BSNL","MTNL","Grameenphone","Robi","Banglalink","Teletalk","Telkomsel","Indosat Ooredoo","Axiata","Tri","Smartfren","China Mobile","Unicom","Telecom","Satcom","Docomo","Rakuten","IIJmio","Orange","Verizon","AT&T","T-Mobile","Sprint","Vodafone","Telefonica","EE","Orange","Three"])
+			fblc = random.choice(["ja_JP","ex_MX","en_CU","en_US","tl-PH","es_ES","pt_BR","de_DE","it_IT","ja_JP","ko_KR","ru_RU","zh_CN","ar_AE","en_GB"])
+			fbcr = random.choice(["PLDT","Smart Communications","Globe Telecom","Zong","Jazz","SCO","Jio","DITO Telecommunity","NOW Telecom","Sky","ABS-CBN","Grameenphone","Robi","Banglalink","Teletalk","Telkomsel","Indosat Ooredoo","Axiata","Tri","Smartfren","China Mobile","Unicom","Telecom","Satcom","Docomo","Rakuten","IIJmio","Orange","Verizon","AT&T","T-Mobile","Sprint","Vodafone","Telefonica","EE","Orange","Three"])
 			fban = random.choice(["FB4A", "FB5A", "FB6A"])
 			fbpn = random.choice(["com.facebook.katana", "com.facebook.orca", "com.facebook.lite"])
 			ishmum_ua = f"[FBAN/{fban};FBAV/{facebook_version};FBLC/en_US;FBBV/{fbbv};FBCR/{fbcr};FBMF/Oppo;FBBD/Oppo;FBDV/PESM10;FBSV/12;FBCA/armeabi-v7a:armeabi;FBDM/"+"{"+f"density={density},width={width},height={height}]"
