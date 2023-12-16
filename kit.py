@@ -68,7 +68,7 @@ def logo():
  [•] Status    :   Free
  [•] Tool      :   Free 
  [•] Facebook  :   Ishmum Sarker Siam
- [•] Version   :  \033[1;32m 2.7\033[1;32m \033[1;37m
+ [•] Version   :  \033[1;32m 2.8\033[1;32m \033[1;37m
 ---------------------------------------------------''')
 	p(logo)
 def clear():
@@ -563,7 +563,7 @@ class Ishmum:
 			fbcr = random.choice(["PLDT","Smart Communications","Globe Telecom","Zong","Jazz","SCO","Jio","DITO Telecommunity","NOW Telecom","Sky","ABS-CBN","Grameenphone","Robi","Banglalink","Teletalk","Telkomsel","Indosat Ooredoo","Axiata","Tri","Smartfren","China Mobile","Unicom","Telecom","Satcom","Docomo","Rakuten","IIJmio","Orange","Verizon","AT&T","T-Mobile","Sprint","Vodafone","Telefonica","EE","Orange","Three"])
 			fban = random.choice(["FB4A", "FB5A", "FB6A"])
 			fbpn = random.choice(["com.facebook.katana", "com.facebook.orca", "com.facebook.lite"])
-			ishmum_ua = f"[FBAN/{fban};FBAV/{facebook_version};FBLC/en_US;FBBV/{fbbv};FBCR/{fbcr};FBMF/Oppo;FBBD/Oppo;FBDV/PESM10;FBSV/12;FBCA/armeabi-v7a:armeabi;FBDM/"+"{"+f"density={density},width={width},height={height}]"
+			ishmum_ua = f"[FBAN/{fban};FBAV/{facebook_version};FBLC/en_US;FBRV/{fbbv};FBCR/{fbcr};FBMF/vivo;FBBD/vivo;FBDV/vivo 1808;FBSV/8.1.0;FBCA/armeabi-v7a:armeabi;FBDM/"+"{"+f"density={density},width={width},height={height}]"
 			fn = nm.split(' ')[0]
 			try:
 				ln = nm.split(' ')[1]
